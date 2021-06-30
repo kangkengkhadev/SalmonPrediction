@@ -12,9 +12,8 @@ import streamlit as st
 # set app title
 st.title("salmon predict!!!")
 # load model
-MODEL_URL = "https://github.com/kangkengkhadev/salmon/blob/main/export.pkl"
-urllib.request.urlretrieve(MODEL_URL, "export.pkl")
-learn_inf = load_learner('export.pkl', cpu=True)
+path = Path()
+learn_inf = load_learner(path/'export.pkl', cpu=True)
 
 
 def predict(img, learn):
@@ -30,7 +29,7 @@ def predict(img, learn):
 # sidebar
 ##################################
 # sidebar title
-st.sidebar.write('### Enter cookie to classify')
+st.sidebar.write('### Enter salmon to classify')
 
 # image source selection
 option = st.sidebar.radio('', ['Use a validation image', 'Use your own image'])
