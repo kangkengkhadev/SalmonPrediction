@@ -22,7 +22,7 @@ def predict(img, learn):
     # make prediction
     pred, pred_idx, pred_prob = learn_inf.predict(img)
     # Display the prediction
-    st.success(f"This is {pred} cookie with the probability of {pred_prob[pred_idx]*100:.02f}%")
+    st.success(f"This is {pred}  with the probability of {pred_prob[pred_idx]*100:.02f}%")
     # Display the test image
     st.image(img, use_column_width=True)
 
