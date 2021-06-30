@@ -3,6 +3,7 @@ from fastai.vision.all import (
     PILImage,
     Resize,
 )
+from fastai.vision.widgets import *
 import glob
 from random import shuffle
 import urllib.request
