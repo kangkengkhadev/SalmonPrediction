@@ -9,14 +9,12 @@ import glob
 from random import shuffle
 import urllib.request
 import streamlit as st
-import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 
 # set app title
 st.title("cactus")
 # load model
-learn_inf = load_learner('https://github.com/kangkengkhadev/salmon_prediction/blob/main/export.pkl', cpu=True)
+path = Path()
+learn_inf = load_learner(path/'export.pkl', cpu=True)
 
 
 def predict(img, learn):
