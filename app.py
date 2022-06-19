@@ -16,7 +16,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 # set app title
 st.title("cactus")
 # load model
-path = Path()
+path = "https://github.com/kangkengkhadev/salmon_prediction/blob/main"
 learn_inf = load_learner(path/'export.pkl', cpu=True)
 
 
