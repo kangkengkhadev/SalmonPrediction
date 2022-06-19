@@ -9,10 +9,12 @@ import glob
 from random import shuffle
 import urllib.request
 import streamlit as st
-
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
 
 # set app title
-st.title("salmon predict!!!")
+st.title("cactus")
 # load model
 path = Path()
 learn_inf = load_learner(path/'export.pkl', cpu=True)
@@ -31,7 +33,7 @@ def predict(img, learn):
 # sidebar
 ##################################
 # sidebar title
-st.sidebar.write('### Enter salmon to classify')
+st.sidebar.write('### Enter cactus to classify')
 
 # image source selection
 option = st.sidebar.radio('', ['Use a validation image', 'Use your own image'])
