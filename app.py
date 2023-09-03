@@ -11,10 +11,10 @@ import urllib.request
 import streamlit as st
 
 # set app title
-st.title("Mushroom predict")
+st.title("cactus")
 # load model
 path = Path()
-learn_inf = load_learner(path/'resnet50.pkl', cpu=True)
+learn_inf = load_learner(path/'export.pkl', cpu=True)
 
 
 def predict(img, learn):
@@ -30,7 +30,7 @@ def predict(img, learn):
 # sidebar
 ##################################
 # sidebar title
-st.sidebar.write('### Enter mushroom to classify')
+st.sidebar.write('### Enter cactus to classify')
 
 # image source selection
 option = st.sidebar.radio('', ['Use a validation image', 'Use your own image'])
