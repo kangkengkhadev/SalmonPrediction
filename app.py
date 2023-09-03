@@ -11,7 +11,7 @@ import urllib.request
 import streamlit as st
 
 # set app title
-st.title("cactus")
+st.title("Mushroom predict")
 # load model
 path = Path()
 learn_inf = load_learner(path/'resnet50.pkl', cpu=True)
@@ -30,7 +30,7 @@ def predict(img, learn):
 # sidebar
 ##################################
 # sidebar title
-st.sidebar.write('### Enter cactus to classify')
+st.sidebar.write('### Enter mushroom to classify')
 
 # image source selection
 option = st.sidebar.radio('', ['Use a validation image', 'Use your own image'])
