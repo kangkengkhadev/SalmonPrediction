@@ -14,7 +14,7 @@ import streamlit as st
 st.title("cactus")
 # load model
 path = Path()
-learn_inf = load_learner(path/'export.pkl', cpu=True)
+learn_inf = load_learner(path/'resnet50.pkl', cpu=True)
 
 
 def predict(img, learn):
